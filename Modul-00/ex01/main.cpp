@@ -1,4 +1,4 @@
-#include "phonebook.hpp"
+#include "phonebook.h"
 
 int main(void)
 {
@@ -7,8 +7,8 @@ int main(void)
 
     while (1)
     {
-        std::cout << "Entrer une commande : ";
-        std::cin >> enter;
+        std::cout << "ENTRER UNE COMMANDE : ";
+        std::getline(std::cin, enter);
         if (enter == "EXIT")
             break;
         if (enter == "ADD")

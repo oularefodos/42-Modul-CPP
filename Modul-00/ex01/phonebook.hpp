@@ -1,8 +1,9 @@
-#ifndef _PHONEBOOK_
-#define _PHONEBOOK_
+#ifndef PHONEBOOK_HPP
+#define PHONEBOOK_HPP
 #include <string.h>
 #include <iostream>
 #include "contact.hpp"
+#include  <cstdlib>
 
 class PhoneBook {
     private:
