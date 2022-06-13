@@ -9,6 +9,10 @@ int main(void)
     {
         std::cout << "ENTRER UNE COMMANDE : ";
         std::getline(std::cin, enter);
+        if (!std::cin.good()) {
+            std::cout << "Error...." << std::endl;
+            break;
+        }
         if (enter == "EXIT")
             break;
         if (enter == "ADD")
