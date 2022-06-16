@@ -25,34 +25,33 @@ public:
 
 	static int	getNbAccounts( void ); // ok
 	static int	getTotalAmount( void ); // ok
-	static int	getNbDeposits( void ); 
-	static int	getNbWithdrawals( void );
-	static void	displayAccountsInfos( void );
+	static int	getNbDeposits( void );  // OK
+	static int	getNbWithdrawals( void ); // OK
+	static void	displayAccountsInfos( void ); // OK
 
 	Account( int initial_deposit );
 	~Account( void );
 
-	void	makeDeposit( int deposit );
-	bool	makeWithdrawal( int withdrawal );
+	void	makeDeposit( int deposit ); // ok
+	bool	makeWithdrawal( int withdrawal ); // ok
 	int		checkAmount( void ) const;
 	void	displayStatus( void ) const;
 
 private:
 
-	static int	_nbAccounts;
-	static int	_totalAmount;
-	static int	_totalNbDeposits;
+	static int	_nbAccounts; // ok
+	static int	_totalAmount; // ok
+	static int	_totalNbDeposits; // ok
 	static int	_totalNbWithdrawals;
 
-	static void	_displayTimestamp( void );
+	static void	_displayTimestamp( void ); // ok
 
-	int				_accountIndex;
-	int				_amount;
-	int				_nbDeposits;
-	int				_nbWithdrawals;
-
+	int				_accountIndex; // OK
+	int				_amount; // OK 
+	int				_nbDeposits; // OK
+	int				_nbWithdrawals; // OK
+	int				_index;
 	Account( void );
-
 };
 
 
