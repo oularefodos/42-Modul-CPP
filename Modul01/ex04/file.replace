@@ -1,0 +1,6 @@
+Une fois que l'on a lu les lignes, on peut les manipuler 
+facilement. Ici, je me contente d'afficher les lignes mais, 
+dans un programme réel on les utiliserait autrement. C'est la méthode 
+la plus utilisée pour lire un fichier. Une fois que l'on a récupéré les 
+lignes dans une variable string  , on peut facilement 
+travailler dessus grâce aux fonctions utilisables sur les chaînes de caractères
