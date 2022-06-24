@@ -5,7 +5,7 @@
 
 class HumanA {
     private:
-       Weapon arme;
+       Weapon *arme;
        std::string name;
     public:
         void attack(void);
