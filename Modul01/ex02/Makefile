@@ -20,6 +20,6 @@ clean:
 	rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME) bonus
+	rm -f $(NAME)
 
 re: fclean all

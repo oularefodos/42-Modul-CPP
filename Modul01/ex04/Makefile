@@ -1,6 +1,6 @@
-NAME= zombie
+NAME= replace
 
-SRCS= Zombie.cpp main.cpp
+SRCS= main.cpp
 
 CFLAGS= -Wall -Wextra -Werror
 
@@ -13,7 +13,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	c++ $(CFLAGS) $^ -o $@
 
-%.o: %.cpp Zombie.hpp
+%.o: %.cpp 
 	c++ $(CFLAGS) -c $<
 
 clean:

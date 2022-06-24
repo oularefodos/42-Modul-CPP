@@ -1,6 +1,6 @@
 NAME= zombies
 
-SRCS= Zombie.cpp main.cpp
+SRCS= Zombie.cpp main.cpp zombieHorde.cpp
 
 CFLAGS= -Wall -Wextra -Werror
 
@@ -13,13 +13,13 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	c++ $(CFLAGS) $^ -o $@
 
-%.o: %.cpp 
+%.o: %.cpp Zombie.hpp
 	c++ $(CFLAGS) -c $<
 
 clean:
 	rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME) bonus
+	rm -f $(NAME)
 
 re: fclean all

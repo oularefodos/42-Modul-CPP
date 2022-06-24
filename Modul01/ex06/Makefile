@@ -1,6 +1,6 @@
-NAME= zombie
+NAME= harl
 
-SRCS= Zombie.cpp main.cpp
+SRCS= Harl.cpp main.cpp
 
 CFLAGS= -Wall -Wextra -Werror
 
@@ -13,7 +13,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	c++ $(CFLAGS) $^ -o $@
 
-%.o: %.cpp Zombie.hpp
+%.o: %.cpp Harl.hpp
 	c++ $(CFLAGS) -c $<
 
 clean:
