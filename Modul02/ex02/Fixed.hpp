@@ -28,15 +28,14 @@ class Fixed {
         Fixed operator - (Fixed const &obj);
         Fixed operator * (Fixed const &obj);
         Fixed operator / (Fixed const &obj);
-        float operator++(void);
-        float operator++(int);
-        float operator--(void);
-        float operator--(int);
+        Fixed operator++(void);
+        Fixed operator++(int);
+        Fixed operator--(void);
+        Fixed operator--(int);
         static Fixed min(Fixed& a, Fixed& b);
         static Fixed min(const Fixed& a, const Fixed& b);
         static Fixed max(Fixed& a, Fixed& b);
         static Fixed max(const Fixed& a, const Fixed& b);
-
 };
 std::ostream& operator<<(std::ostream &out, const Fixed &obj);
 

@@ -4,10 +4,9 @@
 int main( void ) 
 {
     Point a(0, 0);
-    Point b(0, 1);
-    Point c(1, 1);
-    Point x;
-    Point p(0.8, 1);
+    Point b(1, 0);
+    Point c(0, 1);
+    Point p(0.3f, 0.3f);
     std::cout << bsp(a, b, c, p) << std::endl;
     return (0);
 }

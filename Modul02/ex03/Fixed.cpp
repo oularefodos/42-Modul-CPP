@@ -158,23 +158,29 @@ Fixed Fixed::operator/(Fixed const &obj)
 
 // OPERATEUR D'INCREMENTATION
 
-float Fixed::operator++(void)
+Fixed Fixed::operator++(void)
 {
-    return ++nb / float(1 << nb_bits) ;
+    nb++;
+    return *this;
 }
 
-float Fixed::operator--(void)
+Fixed Fixed::operator--(void)
 {
-    return --nb / float(1 << nb_bits) ;
+    nb--;
+    return *this;
 }
 
-float Fixed::operator++(int)
+Fixed Fixed::operator++(int)
 {
-    return nb++ / float(1 << nb_bits) ;
+    Fixed ret(*this);
+    nb++;
+    return ret;
 }
 
-float Fixed::operator--(int)
+Fixed Fixed::operator--(int)
 {
-    return nb-- / float(1 << nb_bits) ;
+    Fixed ret(*this);
+    nb--;
+    return ret;
 }
 
