@@ -1,8 +1,8 @@
-NAME= harl
+NAME= fixed
 
-SRCS= Harl.cpp main.cpp
+SRCS= Fixed.cpp Point.cpp main.cpp
 
-CFLAGS= -Wall -Wextra -Werror -g
+CFLAGS= -Wall -Wextra -Werror -std=c++98
 
 OBJS :=$(SRCS:.cpp=.o)
 
@@ -13,7 +13,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	c++ $(CFLAGS) $^ -o $@
 
-%.o: %.cpp Harl.hpp
+%.o: %.cpp Fixed.hpp Point.hpp
 	c++ $(CFLAGS) -c $<
 
 clean:
