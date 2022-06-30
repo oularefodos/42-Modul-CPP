@@ -34,3 +34,22 @@ FragTrap::FragTrap(FragTrap const &ob) : ClapTrap()
     damage = ob.damage;
     name = ob.name;
 }
+
+void FragTrap::attack(const std::string& target)
+{
+    if (Energy_points > 0 && hitpoint > 0)
+    {
+        std::cout << "ScavTrap " << name << " attacks ";
+        std::cout << target << ", causing " << "damage " << " points of damage" << std::endl;
+        this->Energy_points--;
+    }
+}
+
+FragTrap& FragTrap::operator=(FragTrap const ob)
+{
+    hitpoint = ob.hitpoint;
+    Energy_points = ob.Energy_points;
+    damage = ob.damage;
+    name = ob.name;
+    return *this;
+}

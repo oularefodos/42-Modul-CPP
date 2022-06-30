@@ -5,7 +5,7 @@ ClapTrap::ClapTrap(void)
     hitpoint = 10;
     Energy_points = 10;
     damage = 0;
-    name = "unknown name";
+    name = "";
     std::cout << "Create Claptrap " << name << std::endl;
     
 }
@@ -60,4 +60,14 @@ void ClapTrap::beRepaired(unsigned int amount)
         std::cout << "ClapTrap " << this->name << " repaired " << std::endl;
         this->Energy_points += amount;
     }
+}
+
+ClapTrap& ClapTrap::operator=(ClapTrap const obj)
+{
+    name = obj.name;
+    hitpoint = obj.hitpoint;
+    Energy_points = obj.Energy_points;
+    damage = obj.damage;
+
+    return *this;
 }

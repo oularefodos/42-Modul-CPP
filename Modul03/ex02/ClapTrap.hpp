@@ -17,6 +17,8 @@ class ClapTrap {
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
         ~ClapTrap(void);
+        ClapTrap& operator=(ClapTrap const obj);
+
 };
 
 #endif

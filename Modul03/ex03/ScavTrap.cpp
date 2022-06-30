@@ -44,3 +44,13 @@ void ScavTrap::attack(const std::string& target)
         this->Energy_points--;
     }
 }
+
+ScavTrap& ScavTrap::operator=(ScavTrap const ob)
+{
+    hitpoint = ob.hitpoint;
+    Energy_points = ob.Energy_points;
+    damage = ob.damage;
+    name = ob.name;
+    return *this;
+}
+

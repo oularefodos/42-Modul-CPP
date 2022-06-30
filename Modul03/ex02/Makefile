@@ -1,4 +1,4 @@
-NAME= clapTrap
+NAME= fragTrap
 
 SRCS= ClapTrap.cpp FragTrap.cpp main.cpp
 
@@ -13,7 +13,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	c++ $(CFLAGS) $^ -o $@
 
-%.o: %.cpp ClapTrap.hpp
+%.o: %.cpp ClapTrap.hpp FragTrap.hpp
 	c++ $(CFLAGS) -c $<
 
 clean:
