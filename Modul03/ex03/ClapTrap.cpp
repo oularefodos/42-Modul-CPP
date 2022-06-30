@@ -6,7 +6,7 @@ ClapTrap::ClapTrap(void)
     Energy_points = 10;
     damage = 0;
     name = "unknown name";
-    std::cout << "Create Claptrap " << name << std::endl;
+    std::cout << "Create Object Claptrap " << name << std::endl;
     
 }
 
@@ -16,7 +16,7 @@ ClapTrap::ClapTrap(std::string const _name)
     Energy_points = 10;
     damage = 0;
     name = _name;
-    std::cout << "Create Claptrap " << name << std::endl;
+    std::cout << "Create Object Claptrap " << name << std::endl;
 }
 
 ClapTrap::~ClapTrap(void)
