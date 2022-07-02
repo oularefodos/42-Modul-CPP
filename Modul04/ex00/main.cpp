@@ -16,6 +16,11 @@ int main()
     j->makeSound();
     meta->makeSound();
 
+    delete meta;
+    delete i;
+    delete j;
+    
+
     // *********************************************************
     std::cout << "**************************************************************" << std::endl << std::endl;
 
@@ -25,5 +30,9 @@ int main()
     std::cout << x->getType() << " " << std::endl;
     x->makeSound();
     meta_2->makeSound();
+
+    delete x;
+    delete meta_2;
+
     return 0;
 }

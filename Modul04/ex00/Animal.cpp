@@ -23,7 +23,7 @@ void Animal::setType(std::string _type)
 
 Animal::~Animal(void)
 {
-    std::cout << "destroy Anaimal object" << std::endl;
+    std::cout << "destroy Animal object" << std::endl;
 }
 
 Animal::Animal(Animal const &ob)
