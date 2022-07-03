@@ -2,6 +2,7 @@
 
 Cat::Cat(void)
 {
+    brain = new Brain;
     std::cout << "create a Cat" << std::endl;
     setType("Cat");
 }
@@ -9,11 +10,16 @@ Cat::Cat(void)
 Cat::Cat(Cat const &ob)
 {
     std::cout << "create a Cat" << std::endl;
+    brain = new Brain;
+    brain = ob.brain;
     setType(ob.type);
 }
 
 Cat& Cat::operator=(Cat const ob)
 {
+    delete brain;
+    brain = new Brain;
+    brain = ob.brain;
     setType(ob.type);
     return *this;
 }
@@ -30,5 +36,6 @@ void Cat::makeSound(void) const
 
 Cat::~Cat(void)
 {
+    delete brain;
     std::cout << "destruction de l'objet Cat" << std::endl;
 }
