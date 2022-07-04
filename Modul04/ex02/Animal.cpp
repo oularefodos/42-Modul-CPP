@@ -31,7 +31,7 @@ Animal::Animal(Animal const &ob)
     this->type = ob.type;
 }
 
-Animal& Animal::operator=(Animal const ob)
+Animal& Animal::operator=(Animal const& ob)
 {
     this->type = ob.type;
     return *this;

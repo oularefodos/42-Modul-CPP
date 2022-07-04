@@ -15,7 +15,7 @@ Dog::Dog(Dog const &ob)
     setType(ob.type);
 }
 
-Dog& Dog::operator=(Dog const ob)
+Dog& Dog::operator=(Dog const& ob)
 {
     delete brain;
     brain = new Brain;

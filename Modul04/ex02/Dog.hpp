@@ -8,7 +8,7 @@ class Dog : public Animal {
         Brain *brain;
     public:
         Dog(void);
-        Dog& operator=(Dog const ob);
+        Dog& operator=(Dog const& ob);
         Dog(Dog const &ob);
         std::string getType(void) const;
         void makeSound(void) const;

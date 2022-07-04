@@ -10,8 +10,8 @@ class Animal {
         Animal(void);
         virtual ~Animal(void);
         Animal(Animal const &ob);
-        Animal& operator=(Animal const ob);
-        void virtual makeSound(void) = 0;
+        Animal& operator=(Animal const& ob);
+        virtual void makeSound(void) const = 0;
         std::string getType(void) const;
         void setType(std::string _type);
 };

@@ -15,7 +15,7 @@ Cat::Cat(Cat const &ob)
     setType(ob.type);
 }
 
-Cat& Cat::operator=(Cat const ob)
+Cat& Cat::operator=(Cat const& ob)
 {
     delete brain;
     brain = new Brain;

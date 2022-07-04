@@ -8,7 +8,7 @@ class Cat : public Animal {
         Brain *brain;
     public:
         Cat(void);
-        Cat& operator=(Cat const ob);
+        Cat& operator=(Cat const& ob);
         Cat(Cat const &ob);
         std::string getType(void) const;
         void makeSound(void) const;
