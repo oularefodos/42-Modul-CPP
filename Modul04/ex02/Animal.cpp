@@ -6,11 +6,6 @@ Animal::Animal(void)
     this->type = "Animal";
 }
 
-// void Animal::makeSound(void) const
-// {
-//     std::cout << "le crie de l'Animal" << std::endl;
-// }
-
 std::string Animal::getType(void) const
 {
     return type;

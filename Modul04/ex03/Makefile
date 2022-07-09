@@ -1,6 +1,6 @@
-NAME= polimorphisme
+NAME= materia
 
-SRCS= Animal.cpp  Cat.cpp Dog.cpp WrongAnnimal.cpp WrongCat.cpp  main.cpp
+SRCS= AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp main.cpp
 
 CXXFLAGS= -Wall -Wextra -Werror -std=c++98
 
@@ -13,7 +13,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	c++ $(CXXFLAGS) $^ -o $@
 
-%.o: %.cpp Animal.hpp Cat.hpp Dog.hpp WrongAnnimal.hpp WrongCat.hpp
+%.o: %.cpp AMateria.hpp Character.hpp Cure.hpp  ICharacter.hpp IMateriaSource.hpp Ice.hpp  MateriaSource.hpp
 	c++ $(CXXFLAGS) -c $<
 
 clean:

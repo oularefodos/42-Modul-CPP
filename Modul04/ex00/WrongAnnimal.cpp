@@ -8,7 +8,7 @@ WrongAnimal::WrongAnimal(void)
 
 void WrongAnimal::makeSound(void) const
 {
-    std::cout << "le de WrongAnimal" << std::endl;
+    std::cout << "le cri de WrongAnimal" << std::endl;
 }
 
 std::string WrongAnimal::getType(void) const

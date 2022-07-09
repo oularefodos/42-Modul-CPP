@@ -13,7 +13,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	c++ $(CXXFLAGS) $^ -o $@
 
-%.o: %.cpp Animal.hpp Cat.hpp Dog.hp Brain.hpp
+%.o: %.cpp Animal.hpp Cat.hpp Dog.hpp Brain.hpp
 	c++ $(CXXFLAGS) -c $<
 
 clean:

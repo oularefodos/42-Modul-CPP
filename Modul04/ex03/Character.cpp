@@ -28,7 +28,7 @@ Character::Character(Character const& ob)
 
     i = -1;
     this->index = ob.index;
-    while(ob.tab[++i])
+    while(++i <= index)
         *tab[i] = *ob.tab[i];
     name = ob.name;
 }
@@ -39,7 +39,7 @@ Character& Character::operator=(Character const& ob)
 
     i = -1;
     this->index = ob.index;
-    while(ob.tab[++i])
+    while(++i <= index)
         *tab[i] = *ob.tab[i];
     name = ob.name;
     return *this;
@@ -53,15 +53,16 @@ std::string const& Character::getName(void) const
 void Character::equip(AMateria *m)
 {
     if (index < 3)
-        tab[++index] = m;
+    {
+        if (tab[++index])
+            delete tab[index];
+        tab[index] = m;
+    }
 }
 
 void Character::unequip(int idx)
 {
-    int y;
-    AMateria *cp[4];
-
-    if (idx <= index && idx < 4)
+    if (idx <= index)
     {
         for (int i = idx; i < index; i++)
             tab[i] = tab[i + 1];

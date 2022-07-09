@@ -28,6 +28,7 @@ Animal::~Animal(void)
 
 Animal::Animal(Animal const &ob)
 {
+    std::cout << "creat Animal" << std::endl;
     this->type = ob.type;
 }
 

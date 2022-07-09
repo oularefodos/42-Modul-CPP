@@ -30,7 +30,8 @@ void Brain::setIdeas(std::string str)
 {
     int i(0);
     for (i = 0; (i < 100 && ideas[i] != ""); i++);
-    this->ideas[i] = str;
+    if (i < 100)
+        this->ideas[i] = str;
 }
 
 Brain::~Brain(void)
