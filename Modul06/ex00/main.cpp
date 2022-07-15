@@ -29,10 +29,10 @@ int getType(char * value)
             return (2);
         if (value[i] == 'f' && value[i + 1] != '\0')
             return (-1);
+        if (value[i] == '.' && (n || !isdigit(value[i + 1]) || i == 0))
+            return (-1);
         if (value[i] == '.' && !n)
             n = 4;
-        else if (value[i] == '.' && n)
-            return (-1);
     }
     return (n ? (n) : 1);
 }
@@ -90,13 +90,18 @@ void floatCast(char * value)
     float i;
 
     i = std::strtof(value, nullptr);
-    if (i < 32 || i > '~')
-        std::cout << "char: " << "Non displayeble" << std::endl;
+    if (i - static_cast<int>(i) == 0)
+        intCast(value);
     else
-        std::cout << "char: " << static_cast<char>(i) << std::endl;
-    std::cout << "int: " << static_cast<int>(i)<< std::endl;
-    std::cout << "float: " << static_cast<float>(i) << "f" << std::endl;
-    std::cout << "double: " << static_cast<double>(i) << std::endl;
+    {
+        if (i < 32 || i > '~')
+            std::cout << "char: " << "Non displayeble" << std::endl;
+        else
+            std::cout << "char: " << static_cast<char>(i) << std::endl;
+        std::cout << "int: " << static_cast<int>(i)<< std::endl;
+        std::cout << "float: " << static_cast<float>(i) << "f" << std::endl;
+        std::cout << "double: " << static_cast<double>(i) << std::endl;
+    }
 }
 
 void doubleCast(char * value)
@@ -104,21 +109,23 @@ void doubleCast(char * value)
     double i;
 
     i = std::strtod(value, nullptr);
-    if (i < 32 || i > '~')
-        std::cout << "char: " << "Non displayeble" << std::endl;
+    if (i - static_cast<int>(i) == 0)
+        intCast(value);
     else
-        std::cout << "char: " << static_cast<char>(i) << std::endl;
-    std::cout << "int: " << static_cast<int>(i)<< std::endl;
-    std::cout << "float: " << static_cast<float>(i) << "f" << std::endl;
-    std::cout << "double: " << static_cast<double>(i) << std::endl;
+    {
+        if (i < 32 || i > '~')
+            std::cout << "char: " << "Non displayeble" << std::endl;
+        else
+            std::cout << "char: " << static_cast<char>(i) << std::endl;
+        std::cout << "int: " << static_cast<int>(i)<< std::endl;
+        std::cout << "float: " << static_cast<float>(i) << "f" << std::endl;
+        std::cout << "double: " << static_cast<double>(i) << std::endl;
+    }
 }
 
 int main(int ac, char **args)
 {
     int type;
-    float f;
-    int i;
-    double d;
 
     if (ac != 2)
     {
@@ -143,6 +150,7 @@ int main(int ac, char **args)
             break;
         case 3:
             pseudoCast(args[1]);
+            break;
         case 4:
             doubleCast(args[1]);
             break;

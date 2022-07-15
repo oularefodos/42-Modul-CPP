@@ -29,6 +29,5 @@ int main(void)
     Data *ret = deserialize(rep);
 
     std::cout << ret->days << " ------ " << ret->years << std::endl;
-
     return (0);
 }
